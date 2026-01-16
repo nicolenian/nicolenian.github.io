@@ -8,7 +8,7 @@
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <!-- 自定义 CSS：白底 + 间距缩小 + 图片更大 + 强制直角 + 无框无阴影 -->
+  <!-- 自定义 CSS：白底 + 强制直角 + 间距适中 + 原图比例 + 无框无阴影 -->
   <style>
     body {
       margin: 0;
@@ -53,9 +53,9 @@
       color: #555 !important;
     }
 
-    /* 网格容器：间距缩小，图片更大 */
+    /* 网格容器 */
     .album {
-      padding: 9rem 5% 5rem;  /* 间距适中 */
+      padding: 10rem 6% 6rem;
       background: #fff;
       min-height: 100vh;
       display: flex;
@@ -68,16 +68,16 @@
     }
 
     .col {
-      padding: 1.5rem 1rem;  /* 间距再小一点 */
+      padding: 2rem 1.2rem;
     }
 
     .card {
-      background: transparent;
-      border: none;
-      box-shadow: none;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
       transition: transform 0.4s ease;
       cursor: pointer;
-      border-radius: 0 !important;  /* 强制直角 */
     }
 
     .card:hover {
@@ -85,13 +85,13 @@
     }
 
     .card-img-top {
-      width: 92%;            /* 图片再大一点 */
-      max-width: 750px;      /* 最大宽度加大 */
-      height: auto;
-      object-fit: contain;
+      width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+      background: transparent !important;
+      border-radius: 0 !important; /* 强制图片直角 */
       display: block;
       margin: 0 auto;
-      border-radius: 0 !important;  /* 强制图片直角 */
     }
 
     .card-body {
@@ -115,9 +115,8 @@
     }
 
     @media (max-width: 768px) {
-      .album { padding: 7rem 5% 4rem; }
-      .col { padding: 1rem 0.5rem; }
-      .card-img-top { width: 95%; max-width: 500px; }
+      .album { padding: 8rem 5% 4rem; }
+      .col { padding: 1.5rem 0.8rem; }
       .card-title { font-size: 1.1rem; }
       .card-text { font-size: 0.9rem; }
     }
@@ -146,7 +145,7 @@
   <!-- ARTWORKS 网格 -->
   <main class="album">
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">  <!-- g-4：间距适中缩小 -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
         <!-- 第1幅 -->
         <div class="col">
@@ -178,111 +177,4 @@
         <div class="col">
           <a href="painting3.html" class="text-decoration-none">
             <div class="card">
-              <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
-              <div class="card-body">
-                <h5 class="card-title">Inner Depths 3</h5>
-                <p class="card-text">Oil on canvas, 90x130cm, 2025</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 第4幅 -->
-        <div class="col">
-          <a href="painting4.html" class="text-decoration-none">
-            <div class="card">
-              <img src="images/painting4.jpg" class="card-img-top" alt="Inner Depths 4">
-              <div class="card-body">
-                <h5 class="card-title">Inner Depths 4</h5>
-                <p class="card-text">Oil on canvas, 110x160cm, 2025</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 第5幅 -->
-        <div class="col">
-          <a href="painting5.html" class="text-decoration-none">
-            <div class="card">
-              <img src="images/painting5.jpg" class="card-img-top" alt="Inner Depths 5">
-              <div class="card-body">
-                <h5 class="card-title">Inner Depths 5</h5>
-                <p class="card-text">Oil on canvas, 95x140cm, 2025</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 第6幅 -->
-        <div class="col">
-          <a href="painting6.html" class="text-decoration-none">
-            <div class="card">
-              <img src="images/painting6.jpg" class="card-img-top" alt="Inner Depths 6">
-              <div class="card-body">
-                <h5 class="card-title">Inner Depths 6</h5>
-                <p class="card-text">Oil on canvas, 105x155cm, 2025</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 第7幅 -->
-        <div class="col">
-          <a href="painting7.html" class="text-decoration-none">
-            <div class="card">
-              <img src="images/painting7.jpg" class="card-img-top" alt="Inner Depths 7">
-              <div class="card-body">
-                <h5 class="card-title">Inner Depths 7</h5>
-                <p class="card-text">Oil on canvas, 115x170cm, 2025</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 第8幅 -->
-        <div class="col">
-          <a href="painting8.html" class="text-decoration-none">
-            <div class="card">
-              <img src="images/painting8.jpg" class="card-img-top" alt="Inner Depths 8">
-              <div class="card-body">
-                <h5 class="card-title">Inner Depths 8</h5>
-                <p class="card-text">Oil on canvas, 100x145cm, 2025</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 第9幅 -->
-        <div class="col">
-          <a href="painting9.html" class="text-decoration-none">
-            <div class="card">
-              <img src="images/painting9.jpg" class="card-img-top" alt="Inner Depths 9">
-              <div class="card-body">
-                <h5 class="card-title">Inner Depths 9</h5>
-                <p class="card-text">Oil on canvas, 110x165cm, 2025</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 第10幅 -->
-        <div class="col">
-          <a href="painting10.html" class="text-decoration-none">
-            <div class="card">
-              <img src="images/painting10.jpg" class="card-img-top" alt="Inner Depths 10">
-              <div class="card-body">
-                <h5 class="card-title">Inner Depths 10</h5>
-                <p class="card-text">Oil on canvas, 95x135cm, 2025</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+              <img src="images/painting3.jpg" class="
