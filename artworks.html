@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARTWORKS - Nicole Nian</title>
+
+  <!-- Bootstrap CSS CDN（仅用于导航栏和响应式） -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- 自定义 CSS：完全模仿 Ian Rayer-Smith 高级极简风格 -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #e0e0e0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 300;          /* 细字体，Ian 风格 */
+      letter-spacing: 0.05em;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* 导航栏：固定右上角，极简半透明 */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 1.2rem 0;
+    }
+
+    .navbar-brand {
+      font-size: 1.35rem;
+      font-weight: 300;
+      color: #fff !important;
+      padding-left: 3rem;
+      letter-spacing: 0.15em;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 300;
+      font-size: 0.95rem;
+      margin-left: 2.5rem;
+      letter-spacing: 0.08em;
+      transition: color 0.4s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #ccc !important;
+    }
+
+    /* 作品网格容器：高级留白 + 大图居中 */
+    .gallery {
+      padding: 12rem 5% 8rem;  /* 大量顶部留白，像 Ian */
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 6rem;               /* 大间距，呼吸感 */
+      background: #000;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);  /* 轻微放大，优雅 */
+      opacity: 0.92;
+    }
+
+    /* 作品标题（极简，只在悬停显示或底部小字） */
+    .gallery-item .title {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .gallery-item:hover .title {
+      opacity: 1;
+    }
+
+    /* 响应式：手机上间距缩小 */
+    @media (max-width: 768px) {
+      .gallery {
+        padding: 8rem 3% 6rem;
+        gap: 4rem;
+        grid-template-columns: 1fr;
+      }
+
+      .navbar-brand {
+        padding-left: 1.5rem;
+        font-size: 1.2rem;
+      }
+
+      .navbar-nav .nav-link {
+        margin-left: 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Nicole Nian</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="artworks.html">ARTWORKS</a></li>
+          <li class="nav-item"><a class="nav-link" href="statements.html">STATEMENTS</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+          <li class="nav-item"><a class="nav-link" href="bio.html">BIO</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTWORKS 页面：高级网格（像 Ian） -->
+  <main class="gallery">
+    <!-- 你的第1幅画 -->
+    <div class="gallery-item">
+      <img src="images/painting1.jpg" alt="Inner Depths 1">
+      <div class="title">Inner Depths 1</div>
+    </div>
+
+    <!-- 第2幅 -->
+    <div class="gallery-item">
+      <img src="images/painting2.jpg" alt="Inner Depths 2">
+      <div class="title">Inner Depths 2</div>
+    </div>
+
+    <!-- 第3幅到第10幅：复制上面结构，改文件名和 alt -->
+    <div class="gallery-item">
+      <img src="images/painting3.jpg" alt="Inner Depths 3">
+      <div class="title">Inner Depths 3</div>
+    </div>
+
+    <!-- ... 继续复制到 painting10.jpg ... -->
+    <!-- 你可以复制 <div class="gallery-item">...</div> 块 10 次，改 src 和 alt -->
+
+  </main>
+
+  <!-- Bootstrap JS（仅用于导航栏折叠） -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
