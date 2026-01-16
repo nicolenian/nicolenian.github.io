@@ -8,19 +8,19 @@
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <!-- 自定义 CSS：白底 + Album 示例风格 + 细字体 -->
+  <!-- 自定义 CSS：白底 + Album 风格 + 原图比例 + 可点击 -->
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #fff;          /* 白底 */
+      background-color: #fff;
       color: #333;
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-weight: 300;                /* 细字体 */
+      font-weight: 300;
       line-height: 1.6;
     }
 
-    /* 导航栏：固定右上角，半透明白底 */
+    /* 导航栏 */
     .navbar {
       position: fixed;
       top: 0;
@@ -51,10 +51,10 @@
       color: #555 !important;
     }
 
-    /* Album 网格容器（原汁原味模仿） */
+    /* 网格容器 */
     .album {
-      padding: 8rem 2rem 4rem;  /* 避开导航栏 */
-      background: #fff;         /* 白底 */
+      padding: 8rem 2rem 4rem;
+      background: #fff;
     }
 
     .card {
@@ -62,6 +62,7 @@
       border: 1px solid #eee;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      cursor: pointer;
     }
 
     .card:hover {
@@ -70,39 +71,38 @@
     }
 
     .card-img-top {
-      height: 225px;
-      object-fit: cover;
+      width: 100%;
+      height: auto;          /* 原图比例，不固定高度 */
+      object-fit: contain;   /* 完整显示，不裁剪 */
+      background: #f8f9fa;   /* 防白边 */
     }
 
     .card-title {
       color: #000;
       font-weight: 300;
       font-size: 1.1rem;
+      margin: 0.5rem 0 0.25rem;
     }
 
     .card-text {
       color: #555;
       font-weight: 300;
       font-size: 0.9rem;
+      margin-bottom: 0.5rem;
     }
 
-    .btn-outline-secondary {
-      font-weight: 300;
-      border-color: #ccc;
-      color: #555;
+    /* 去掉按钮，只留文字提示 */
+    .card-footer {
+      background: transparent;
+      border-top: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      color: #777;
     }
 
-    .btn-outline-secondary:hover {
-      background: #f8f9fa;
-      color: #000;
-    }
-
-    /* 响应式调整 */
     @media (max-width: 768px) {
       .album { padding-top: 6rem; }
-      .card-img-top { height: 200px; }
-      .navbar-brand { padding-left: 1rem; font-size: 1.2rem; }
-      .nav-link { margin-left: 1rem; font-size: 0.9rem; }
+      .card-img-top { max-height: 300px; }
     }
   </style>
 </head>
@@ -112,11 +112,9 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Nicole Nian</a>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="artworks.html">ARTWORKS</a></li>
@@ -128,169 +126,169 @@
     </div>
   </nav>
 
-  <!-- ARTWORKS：Bootstrap Album 示例风格网格（白底） -->
+  <!-- ARTWORKS 网格 -->
   <main class="album">
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
         
-        <!-- 第1幅画 -->
+        <!-- 第1幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting1.jpg" class="card-img-top" alt="Inner Depths 1">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 1. Oil on canvas, 100x150cm, 2025. Abstract heart-image layered from inner vitality.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting1.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting1.jpg" class="card-img-top" alt="Inner Depths 1">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 1</h5>
+                <p class="card-text">Oil on canvas, 100x150cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- 第2幅画 -->
+        <!-- 第2幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting2.jpg" class="card-img-top" alt="Inner Depths 2">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 2. Oil on canvas, 120x180cm, 2025. Emerged from meditative automatism.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting2.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting2.jpg" class="card-img-top" alt="Inner Depths 2">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 2</h5>
+                <p class="card-text">Oil on canvas, 120x180cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- 第3幅画 -->
+        <!-- 第3幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 3. Oil on canvas, 90x130cm, 2025. Layered natural vitality from unconscious.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting3.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 3</h5>
+                <p class="card-text">Oil on canvas, 90x130cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- 第4幅画 -->
+        <!-- 第4幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting4.jpg" class="card-img-top" alt="Inner Depths 4">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 4. Oil on canvas, 110x160cm, 2025. Flowing heart-images inspired by nature's rhythm.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting4.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting4.jpg" class="card-img-top" alt="Inner Depths 4">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 4</h5>
+                <p class="card-text">Oil on canvas, 110x160cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- 第5幅画 -->
+        <!-- 第5幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting5.jpg" class="card-img-top" alt="Inner Depths 5">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 5. Oil on canvas, 95x140cm, 2025. Meditative layers of unconscious forms.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting5.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting5.jpg" class="card-img-top" alt="Inner Depths 5">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 5</h5>
+                <p class="card-text">Oil on canvas, 95x140cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- 第6幅画 -->
+        <!-- 第6幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting6.jpg" class="card-img-top" alt="Inner Depths 6">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 6. Oil on canvas, 105x155cm, 2025. Vitality emerging from meditative silence.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting6.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting6.jpg" class="card-img-top" alt="Inner Depths 6">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 6</h5>
+                <p class="card-text">Oil on canvas, 105x155cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- 第7幅画 -->
+        <!-- 第7幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting7.jpg" class="card-img-top" alt="Inner Depths 7">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 7. Oil on canvas, 115x170cm, 2025. Natural forms intertwined with inner light.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting7.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting7.jpg" class="card-img-top" alt="Inner Depths 7">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 7</h5>
+                <p class="card-text">Oil on canvas, 115x170cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- 第8幅画 -->
+        <!-- 第8幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting8.jpg" class="card-img-top" alt="Inner Depths 8">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 8. Oil on canvas, 100x145cm, 2025. Unconscious waves in natural harmony.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting8.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting8.jpg" class="card-img-top" alt="Inner Depths 8">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 8</h5>
+                <p class="card-text">Oil on canvas, 100x145cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- 第9幅画 -->
+        <!-- 第9幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting9.jpg" class="card-img-top" alt="Inner Depths 9">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 9. Oil on canvas, 110x165cm, 2025. Heart-image blooming in quiet nature.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting9.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting9.jpg" class="card-img-top" alt="Inner Depths 9">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 9</h5>
+                <p class="card-text">Oil on canvas, 110x165cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- 第10幅画 -->
+        <!-- 第10幅 -->
         <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/painting10.jpg" class="card-img-top" alt="Inner Depths 10">
-            <div class="card-body">
-              <p class="card-text">Inner Depths 10. Oil on canvas, 95x135cm, 2025. Final layer of inner vitality and nature.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-body-secondary">2025</small>
+          <a href="painting10.html" class="text-decoration-none">
+            <div class="card shadow-sm">
+              <img src="images/painting10.jpg" class="card-img-top" alt="Inner Depths 10">
+              <div class="card-body">
+                <h5 class="card-title">Inner Depths 10</h5>
+                <p class="card-text">Oil on canvas, 95x135cm, 2025</p>
+              </div>
+              <div class="card-footer text-center">
+                Click to view larger
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
       </div>
