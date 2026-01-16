@@ -20,13 +20,13 @@
       line-height: 1.6;
     }
 
-    /* 导航栏：与首页一致，白底半透明 */
+    /* 导航栏：固定右上角，半透明白底 */
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255,255,255,0.98);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(0,0,0,0.08);
       padding: 1rem 0;
@@ -54,7 +54,7 @@
     /* Album 网格容器（原汁原味模仿） */
     .album {
       padding: 8rem 2rem 4rem;  /* 避开导航栏 */
-      background: #fff;
+      background: #fff;         /* 白底 */
     }
 
     .card {
@@ -133,7 +133,7 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         
-        <!-- 你的第1幅画 -->
+        <!-- 第1幅画 -->
         <div class="col">
           <div class="card shadow-sm">
             <img src="images/painting1.jpg" class="card-img-top" alt="Inner Depths 1">
@@ -149,7 +149,7 @@
           </div>
         </div>
 
-        <!-- 第2幅（复制修改） -->
+        <!-- 第2幅画 -->
         <div class="col">
           <div class="card shadow-sm">
             <img src="images/painting2.jpg" class="card-img-top" alt="Inner Depths 2">
@@ -165,8 +165,7 @@
           </div>
         </div>
 
-        <!-- 第3幅到第10幅：继续复制上面 <div class="col">...</div> 块，改 src、alt、p.card-text -->
-        <!-- 示例第3幅 -->
+        <!-- 第3幅画 -->
         <div class="col">
           <div class="card shadow-sm">
             <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
@@ -182,11 +181,12 @@
           </div>
         </div>
 
-              <div class="col">
+        <!-- 第4幅画 -->
+        <div class="col">
           <div class="card shadow-sm">
-            <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
+            <img src="images/painting4.jpg" class="card-img-top" alt="Inner Depths 4">
             <div class="card-body">
-              <p class="card-text">Inner Depths 3. Oil on canvas, 90x130cm, 2025. Layered natural vitality from unconscious.</p>
+              <p class="card-text">Inner Depths 4. Oil on canvas, 110x160cm, 2025. Flowing heart-images inspired by nature's rhythm.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -197,11 +197,12 @@
           </div>
         </div>
 
-              <div class="col">
+        <!-- 第5幅画 -->
+        <div class="col">
           <div class="card shadow-sm">
-            <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
+            <img src="images/painting5.jpg" class="card-img-top" alt="Inner Depths 5">
             <div class="card-body">
-              <p class="card-text">Inner Depths 3. Oil on canvas, 90x130cm, 2025. Layered natural vitality from unconscious.</p>
+              <p class="card-text">Inner Depths 5. Oil on canvas, 95x140cm, 2025. Meditative layers of unconscious forms.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -212,11 +213,12 @@
           </div>
         </div>
 
-              <div class="col">
+        <!-- 第6幅画 -->
+        <div class="col">
           <div class="card shadow-sm">
-            <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
+            <img src="images/painting6.jpg" class="card-img-top" alt="Inner Depths 6">
             <div class="card-body">
-              <p class="card-text">Inner Depths 3. Oil on canvas, 90x130cm, 2025. Layered natural vitality from unconscious.</p>
+              <p class="card-text">Inner Depths 6. Oil on canvas, 105x155cm, 2025. Vitality emerging from meditative silence.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -227,11 +229,12 @@
           </div>
         </div>
 
-              <div class="col">
+        <!-- 第7幅画 -->
+        <div class="col">
           <div class="card shadow-sm">
-            <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
+            <img src="images/painting7.jpg" class="card-img-top" alt="Inner Depths 7">
             <div class="card-body">
-              <p class="card-text">Inner Depths 3. Oil on canvas, 90x130cm, 2025. Layered natural vitality from unconscious.</p>
+              <p class="card-text">Inner Depths 7. Oil on canvas, 115x170cm, 2025. Natural forms intertwined with inner light.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -242,11 +245,12 @@
           </div>
         </div>
 
-              <div class="col">
+        <!-- 第8幅画 -->
+        <div class="col">
           <div class="card shadow-sm">
-            <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
+            <img src="images/painting8.jpg" class="card-img-top" alt="Inner Depths 8">
             <div class="card-body">
-              <p class="card-text">Inner Depths 3. Oil on canvas, 90x130cm, 2025. Layered natural vitality from unconscious.</p>
+              <p class="card-text">Inner Depths 8. Oil on canvas, 100x145cm, 2025. Unconscious waves in natural harmony.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -257,11 +261,12 @@
           </div>
         </div>
 
-              <div class="col">
+        <!-- 第9幅画 -->
+        <div class="col">
           <div class="card shadow-sm">
-            <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
+            <img src="images/painting9.jpg" class="card-img-top" alt="Inner Depths 9">
             <div class="card-body">
-              <p class="card-text">Inner Depths 3. Oil on canvas, 90x130cm, 2025. Layered natural vitality from unconscious.</p>
+              <p class="card-text">Inner Depths 9. Oil on canvas, 110x165cm, 2025. Heart-image blooming in quiet nature.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -271,7 +276,22 @@
             </div>
           </div>
         </div>
-        <!-- ... 复制到第10幅 ... -->
+
+        <!-- 第10幅画 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/painting10.jpg" class="card-img-top" alt="Inner Depths 10">
+            <div class="card-body">
+              <p class="card-text">Inner Depths 10. Oil on canvas, 95x135cm, 2025. Final layer of inner vitality and nature.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+                <small class="text-body-secondary">2025</small>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
