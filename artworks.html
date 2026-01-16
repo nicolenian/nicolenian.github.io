@@ -8,19 +8,19 @@
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <!-- 自定义 CSS：黑底 + Album 示例风格 + 细字体 -->
+  <!-- 自定义 CSS：黑底 + Album 网格 + 细字体 -->
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #000;          /* 黑底 */
+      background-color: #000;
       color: #e0e0e0;
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-weight: 300;                /* 细字体 */
+      font-weight: 300;  /* 细字体，像 Ian */
       line-height: 1.6;
     }
 
-    /* 导航栏：与首页一致 */
+    /* 导航栏：固定右上角，半透明 */
     .navbar {
       position: fixed;
       top: 0;
@@ -29,7 +29,6 @@
       background: rgba(0,0,0,0.6);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding: 1rem 0;
     }
 
     .navbar-brand {
@@ -37,6 +36,7 @@
       font-weight: 300;
       color: #fff !important;
       padding-left: 2rem;
+      letter-spacing: 0.1em;
     }
 
     .navbar-nav .nav-link {
@@ -44,13 +44,15 @@
       font-weight: 300;
       font-size: 0.95rem;
       margin-left: 1.5rem;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
     }
 
     .nav-link:hover {
       color: #ccc !important;
     }
 
-    /* Bootstrap Album 网格容器（原汁原味模仿） */
+    /* Album 网格容器 */
     .album {
       padding: 8rem 2rem 4rem;  /* 避开导航栏 */
       background: #000;
@@ -60,6 +62,7 @@
       background: #1a1a1a;
       border: none;
       transition: transform 0.3s ease;
+      overflow: hidden;
     }
 
     .card:hover {
@@ -67,7 +70,7 @@
     }
 
     .card-img-top {
-      height: 225px;
+      height: 300px;
       object-fit: cover;
     }
 
@@ -75,6 +78,7 @@
       color: #fff;
       font-weight: 300;
       font-size: 1.1rem;
+      margin-bottom: 0.5rem;
     }
 
     .card-text {
@@ -83,14 +87,16 @@
       font-size: 0.9rem;
     }
 
-    .btn-outline-secondary {
+    .btn-outline-light {
       font-weight: 300;
     }
 
     /* 响应式调整 */
     @media (max-width: 768px) {
       .album { padding-top: 6rem; }
-      .card-img-top { height: 200px; }
+      .card-img-top { height: 250px; }
+      .navbar-brand { font-size: 1.2rem; padding-left: 1rem; }
+      .nav-link { margin-left: 1rem; font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -99,7 +105,7 @@
   <!-- 导航栏 -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Nicole Nian</a>
+      <a class="navbar-brand" href="index.html">Nicole Nian</a>  <!-- 点击回首页 -->
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -116,43 +122,68 @@
     </div>
   </nav>
 
-  <!-- ARTWORKS：Bootstrap Album 示例风格网格 -->
+  <!-- ARTWORKS Album 网格（像 Bootstrap Album 示例） -->
   <main class="album">
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
         
         <!-- 你的第1幅画 -->
         <div class="col">
           <div class="card shadow-sm">
             <img src="images/painting1.jpg" class="card-img-top" alt="Inner Depths 1">
             <div class="card-body">
-              <p class="card-text">Inner Depths 1. Oil on canvas, 100x150cm, 2025. Abstract heart-image layered from inner vitality.</p>
+              <h5 class="card-title">Inner Depths 1</h5>
+              <p class="card-text">Oil on canvas, 100x150cm, 2025</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-light">View</button>
                 </div>
-                <small class="text-body-secondary">2025</small>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 第2幅（复制修改） -->
+        <!-- 第2幅（复制修改文件名、标题、描述） -->
         <div class="col">
           <div class="card shadow-sm">
             <img src="images/painting2.jpg" class="card-img-top" alt="Inner Depths 2">
             <div class="card-body">
-              <p class="card-text">Inner Depths 2. Oil on canvas, 120x180cm, 2025. Emerged from meditative automatism.</p>
+              <h5 class="card-title">Inner Depths 2</h5>
+              <p class="card-text">Oil on canvas, 120x180cm, 2025</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-light">View</button>
                 </div>
-                <small class="text-body-secondary">2025</small>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 第3幅到第10幅：继续复制上面 <div class="col">...</div> 块，改 src、alt、p.card-text -->
+        <!-- 第3幅到第10幅：复制上面结构，改 src、title、text -->
         <!-- 示例第3幅 -->
-        <div class="
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/painting3.jpg" class="card-img-top" alt="Inner Depths 3">
+            <div class="card-body">
+              <h5 class="card-title">Inner Depths 3</h5>
+              <p class="card-text">Oil on canvas, 90x130cm, 2025</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-light">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ... 继续复制加到第10幅 ... -->
+        <!-- 你可以复制上面的 <div class="col">...</div> 块9次，改 painting4.jpg 到 painting10.jpg -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
