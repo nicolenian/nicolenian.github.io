@@ -4,92 +4,102 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nicole Nian - Abstract Oil Paintings</title>
+
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- 自定义 CSS：Ian 风格字体 + 极简全屏首页 + Album 网格适配 -->
+
+  <!-- 自定义 CSS：Ian 风格字体 + 极简全屏首页 + 轮播背景白色过渡 -->
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #000;
+      background-color: #fff; /* 切换时背景变成白色 */
       color: #e0e0e0;
-      font-family: 'Helvetica Neue', Arial, sans-serif; /* Ian 风格细长字体 */
-      font-weight: 300; /* 整体字体变细，不粗 */
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 300;
       overflow: hidden; /* 固定不动，不能往下拉 */
       line-height: 1.6;
     }
+
     /* 导航栏：固定右上角，完全透明，透着图片 */
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
-      background: transparent; /* 完全透明 */
-      border-bottom: none; /* 去掉边框 */
+      background: transparent;
+      border-bottom: none;
       padding: 1.2rem 0;
     }
+
     .navbar-brand {
-      font-size: 1.4rem; /* 细长字体 */
-      font-weight: 300; /* 不粗，像 Ian */
+      font-size: 1.4rem;
+      font-weight: 300;
       color: #fff !important;
       padding-left: 2rem;
-      letter-spacing: 0.1em; /* Ian 风格字间距 */
+      letter-spacing: 0.1em;
     }
+
     .navbar-nav .nav-link {
       color: #fff !important;
-      font-weight: 300; /* 细字体 */
+      font-weight: 300;
       font-size: 0.95rem;
       margin-left: 1.5rem;
       letter-spacing: 0.05em;
       transition: color 0.3s;
     }
+
     .nav-link:hover {
       color: #ccc !important;
     }
-    /* 首页全屏轮播（固定不动，自动横向切换 + 闪烁淡入淡出） */
+
+    /* 首页全屏轮播（固定不动，自动横向切换 + 淡入淡出，背景白色） */
     .hero-carousel {
       height: 100vh;
       width: 100vw;
       overflow: hidden;
+      background: #fff; /* 轮播容器背景白色 */
     }
-    .carousel-inner .carousel-item img {
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+
+    .carousel-inner {
+      height: 100%;
     }
-    .carousel-fade .carousel-item {
+
+    .carousel-inner .carousel-item {
+      height: 100%;
       transition: opacity 1.5s ease-in-out; /* 淡入淡出 + 轻微闪烁效果 */
     }
-    /* 占位页面通用（如果有其他页面） */
-    .section {
-      min-height: 100vh;
-      padding: 8rem 2rem 4rem;
-      background: #000;
-      text-align: center;
+
+    .carousel-inner .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
-    .section h2 {
-      font-weight: 300;
-      font-size: 3rem;
-      margin-bottom: 2rem;
-      letter-spacing: 0.2em;
+
+    /* 去掉轮播控制箭头（可选，如果你不喜欢箭头） */
+    .carousel-control-prev,
+    .carousel-control-next {
+      opacity: 0.4;
+      filter: invert(1); /* 让箭头变白色，更显眼 */
     }
+
     /* 响应式 */
     @media (max-width: 768px) {
       .navbar-brand { font-size: 1.2rem; padding-left: 1rem; }
       .nav-link { margin-left: 1rem; font-size: 0.9rem; }
-      .section h2 { font-size: 2rem; }
     }
   </style>
 </head>
+
 <body>
   <!-- 固定导航栏 -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <!-- 左上角名字 -->
       <a class="navbar-brand" href="#">Nicole Nian</a>
-      <!-- 右边分类（点击跳转独立页面） -->
+
+      <!-- 右边分类 -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -103,31 +113,33 @@
       </div>
     </div>
   </nav>
-  <!-- 首页：全屏轮播，自动播放5张，固定不动 + 淡入淡出闪烁切换 -->
-  <div class="hero-carousel carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"> <!-- 自动播放，每5秒切换 -->
+
+  <!-- 首页：全屏轮播，自动播放5张，固定不动 + 淡入淡出白色过渡 -->
+  <div id="heroCarousel" class="hero-carousel carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner">
       <!-- 第一张 -->
       <div class="carousel-item active">
-        <img src="images/painting1.jpg" alt="Nicole Nian - Featured Work 1">
+        <img src="images/painting1.jpg" class="d-block w-100" alt="Nicole Nian - Featured Work 1">
       </div>
       <!-- 第二张 -->
       <div class="carousel-item">
-        <img src="images/painting2.jpg" alt="Nicole Nian - Featured Work 2">
+        <img src="images/painting2.jpg" class="d-block w-100" alt="Nicole Nian - Featured Work 2">
       </div>
       <!-- 第三张 -->
       <div class="carousel-item">
-        <img src="images/painting3.jpg" alt="Nicole Nian - Featured Work 3">
+        <img src="images/painting3.jpg" class="d-block w-100" alt="Nicole Nian - Featured Work 3">
       </div>
       <!-- 第四张 -->
       <div class="carousel-item">
-        <img src="images/painting4.jpg" alt="Nicole Nian - Featured Work 4">
+        <img src="images/painting4.jpg" class="d-block w-100" alt="Nicole Nian - Featured Work 4">
       </div>
       <!-- 第五张 -->
       <div class="carousel-item">
-        <img src="images/painting5.jpg" alt="Nicole Nian - Featured Work 5">
+        <img src="images/painting5.jpg" class="d-block w-100" alt="Nicole Nian - Featured Work 5">
       </div>
     </div>
   </div>
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
