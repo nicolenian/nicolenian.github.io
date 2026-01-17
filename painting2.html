@@ -3,22 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inner Depths X - Nicole Nian</title>  <!-- 改成第X幅标题 -->
+  <meta name="description" content="Inner Depths 2 - Abstract oil painting by Nicole Nian, 2025"> <!-- SEO 描述 -->
+  <title>Inner Depths 2 - Nicole Nian</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+  <!-- 自定义 CSS：白底 + 极简详情页 -->
   <style>
-    body { background: #fff; color: #333; font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 300; margin: 0; padding: 0; }
-    .navbar { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.08); z-index: 1000; padding: 1rem 0; }
-    .navbar-brand { font-size: 1.4rem; color: #000 !important; padding-left: 2rem; }
-    .nav-link { color: #000 !important; font-weight: 300; margin-left: 1.5rem; }
-    .nav-link:hover { color: #555 !important; }
-    .detail-container { padding: 8rem 5% 4rem; text-align: center; }
-    .detail-img { max-width: 100%; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 2rem; }
-    .detail-title { font-size: 2.5rem; font-weight: 300; margin-bottom: 1rem; }
-    .detail-desc { font-size: 1.1rem; max-width: 800px; margin: 0 auto 2rem; color: #555; }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 1rem 0;
+    }
+
+    .navbar-brand {
+      font-size: 1.4rem;
+      color: #000 !important;
+      padding-left: 2rem;
+    }
+
+    .nav-link {
+      color: #000 !important;
+      font-weight: 300;
+      margin-left: 1.5rem;
+    }
+
+    .nav-link:hover {
+      color: #555 !important;
+    }
+
+    .detail-container {
+      padding: 8rem 5% 4rem;
+      text-align: center;
+    }
+
+    .detail-img {
+      max-width: 100%;
+      max-height: 80vh; /* 防止手机上太大 */
+      height: auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      margin-bottom: 2rem;
+      border-radius: 0; /* 直角 */
+    }
+
+    .detail-title {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .detail-desc {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: #555;
+    }
+
+    .btn-outline-secondary {
+      font-weight: 300;
+      border-color: #ccc;
+      color: #555;
+    }
+
+    .btn-outline-secondary:hover {
+      background: #f8f9fa;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .detail-container { padding: 7rem 5% 3rem; }
+      .detail-title { font-size: 2rem; }
+      .detail-desc { font-size: 1rem; }
+      .detail-img { max-height: 60vh; }
+    }
   </style>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -35,9 +112,9 @@
   </nav>
 
   <div class="detail-container">
-    <h1 class="detail-title">Inner Depths X</h1>  <!-- 改成第X幅标题 -->
-    <img src="images/paintingX.jpg" class="detail-img" alt="Inner Depths X - Full View">  <!-- 改成对应文件名 -->
-    <p class="detail-desc">Oil on canvas, XXxXXcm, 2025. 这里写这张画的详细描述、灵感来源、技法等。</p>  <!-- 改成这张画的具体描述 -->
+    <h1 class="detail-title">Inner Depths 2</h1> <!-- 改成第2幅标题 -->
+    <img src="images/painting2.jpg" class="detail-img" alt="Inner Depths 2 - Full View" loading="lazy"> <!-- 加 lazy 加载 -->
+    <p class="detail-desc">Oil on canvas, 120x180cm, 2025. This piece explores the emergence of meditative forms from inner silence, with layered colors evoking natural rhythm and unconscious vitality.</p> <!-- 改成你的描述 -->
     <a href="artworks.html" class="btn btn-outline-secondary">Back to Artworks</a>
   </div>
 
