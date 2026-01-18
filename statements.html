@@ -15,8 +15,8 @@
       color: #111111;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       font-weight: 300;
-      line-height: 1.8;
-      letter-spacing: 0.02em;
+      line-height: 1.9;
+      letter-spacing: 0.04em;
     }
 
     .navbar {
@@ -24,92 +24,89 @@
       top: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.04);
-      padding: 1.4rem 0;
+      background: transparent;
+      border-bottom: none;
+      padding: 2rem 0 1rem;
     }
 
     .navbar-brand {
-      font-size: 1.45rem;
+      font-size: 1.3rem;
       font-weight: 300;
       color: #000 !important;
-      padding-left: 3rem;
-      letter-spacing: 0.12em;
+      padding-left: 4rem;
+      letter-spacing: 0.15em;
     }
 
     .navbar-nav .nav-link {
       color: #000 !important;
       font-weight: 300;
-      font-size: 0.96rem;
-      margin-left: 2.2rem;
-      letter-spacing: 0.06em;
+      font-size: 0.92rem;
+      margin-left: 2.5rem;
+      letter-spacing: 0.08em;
     }
 
     .nav-link:hover,
     .nav-link.active {
-      color: #444 !important;
+      color: #333 !important;
     }
 
     .statement-wrapper {
       min-height: 100vh;
-      padding: 14rem 8% 8rem;
-      display: flex;
-      align-items: center;
+      padding: 16rem 10% 8rem; /* 超大顶部留白，像 Ian */
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .statement-content {
-      max-width: 1100px;
-      margin: 0 auto;
       display: flex;
-      gap: 8rem;
+      gap: 10rem;
       align-items: flex-start;
     }
 
     .text-column {
-      flex: 1.2;
+      flex: 1.1;
     }
 
     .photo-column {
-      flex: 0.8;
+      flex: 0.9;
       text-align: center;
     }
 
     .statement-title {
-      font-size: 1.5rem;
+      font-size: 1.4rem;       /* 标题非常小，只比正文大一点点 */
       font-weight: 300;
-      margin-bottom: 2.5rem;
-      letter-spacing: 0.06em;
+      margin-bottom: 4rem;
+      letter-spacing: 0.1em;
       color: #000;
+      text-align: left;
     }
 
     .statement-text {
-      font-size: 1.0rem;
-      line-height: 1.85;
+      font-size: 1.0rem;       /* 正文字体小而舒适 */
+      line-height: 2.0;
       color: #222;
     }
 
     .statement-text p {
-      margin-bottom: 1.8rem;
+      margin-bottom: 2.2rem;
     }
 
     .photo-container img {
-      max-width: 380px;          /* 照片调小，像 Ian 一样精致 */
+      max-width: 420px;        /* 照片小而精致，像 Ian */
       height: auto;
       border-radius: 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       display: block;
-      margin: 0 auto;
+      margin: 2rem auto 0;
     }
 
     .back-link {
-      display: inline-block;
-      margin-top: 3rem;
-      font-size: 1rem;
-      color: #444;
+      display: block;
+      margin-top: 4rem;
+      font-size: 0.95rem;
+      color: #555;
       text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: color 0.3s ease;
+      letter-spacing: 0.06em;
+      transition: color 0.3s;
     }
 
     .back-link:hover {
@@ -117,26 +114,29 @@
     }
 
     @media (max-width: 992px) {
+      .statement-wrapper {
+        padding: 12rem 6% 6rem;
+      }
       .statement-content {
         flex-direction: column;
-        gap: 4rem;
+        gap: 5rem;
       }
       .statement-title {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
       }
       .statement-text {
-        font-size: 0.95rem;
+        font-size: 0.98rem;
       }
       .photo-container img {
-        max-width: 300px;     /* 手机上再小一点 */
+        max-width: 340px;
       }
       .navbar-brand {
-        font-size: 1.3rem;
-        padding-left: 1.5rem;
+        font-size: 1.25rem;
+        padding-left: 2rem;
       }
       .nav-link {
-        font-size: 0.9rem;
-        margin-left: 1.2rem;
+        font-size: 0.88rem;
+        margin-left: 1.4rem;
       }
     }
   </style>
@@ -160,7 +160,7 @@
     </div>
   </nav>
 
-  <!-- Statements 内容：左文字 右照片 -->
+  <!-- Statements 内容 -->
   <div class="statement-wrapper">
     <div class="statement-content">
       <div class="text-column">
@@ -181,7 +181,7 @@
 
       <div class="photo-column">
         <!-- 替换成你的照片路径 -->
-        <img src="images/your-portrait.jpg" alt="Nicole Nian Portrait">
+        <img src="images/nicole-portrait.jpg" alt="Nicole Nian">
       </div>
     </div>
   </div>
