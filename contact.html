@@ -75,12 +75,20 @@
     .contact-info {
       font-size: 0.95rem;
       line-height: 1.9;
-      color: #666;
+      color: #333;
       margin-bottom: 2rem;
       text-align: left;
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .contact-info p {
+      margin: 0 0 0.4rem 0; /* 正常行间距 */
+    }
+
+    .contact-info .empty-line {
+      height: 1.5rem; /* 空一行的高度 */
     }
 
     .contact-divider {
@@ -162,13 +170,15 @@
       <h1 class="contact-title">CONTACT</h1>
 
       <div class="contact-info">
-        Nicole Nian<br>
-        Tama Art University<br>
-        Blow Up Studio<br>
-        193 Zhongshan Second Road<br>
-        Songjiang District, Shanghai<br><br>
-        Email: <a href="mailto:13621855521anian@gmail.com" class="contact-link">13621855521anian@gmail.com</a><br>
-  
+        <p>Nicole Nian</p>
+        <div class="empty-line"></div> <!-- Nicole Nian 和 Tama Art University 之间空一行 -->
+        <p>Tama Art University</p>
+        <div class="empty-line"></div> <!-- Tama Art University 和 Blow Up Studio 之间空一行 -->
+        <p>Blow Up Studio</p>
+        <p>193 Zhongshan Second Road</p>
+        <p>Songjiang District, Shanghai</p>
+        <p>Email: 13621855521anian@gmail.com</p> <!-- 不变蓝色、无链接 -->
+        <p>Phone: +86 136 2185 5521</p>
       </div>
 
       <!-- 细横线 -->
@@ -180,7 +190,7 @@
           INSTAGRAM
         </a>
 
-        <!-- Mailing List（如果你还没链接，先注释或删掉） -->
+        <!-- Mailing List（如果还没链接，可删或注释） -->
         <!--
         <a href="https://buttondown.email/你的订阅链接" target="_blank" rel="noopener noreferrer">
           <img src="images/email-icon.png" alt="Email">
