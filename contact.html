@@ -76,10 +76,16 @@
       font-size: 0.95rem;
       line-height: 1.9;
       color: #666;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
-    .contact-link {
+    .contact-social {
+      margin-top: 2rem;
+    }
+
+    .contact-social a {
+      display: block;
+      margin: 1.5rem 0;
       color: #000;
       text-decoration: none;
       font-size: 1rem;
@@ -87,23 +93,27 @@
       transition: color 0.3s;
     }
 
-    .contact-link:hover {
+    .contact-social a:hover {
       color: #555;
     }
 
-    .contact-social {
-      margin-top: 3rem;
+    .contact-social img {
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+      margin-right: 12px;
     }
 
-    .contact-social a {
-      margin: 0 1.5rem;
+    .back-link {
+      display: block;
+      margin-top: 4rem;
+      font-size: 0.95rem;
       color: #666;
       text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.3s;
+      letter-spacing: 0.05em;
     }
 
-    .contact-social a:hover {
+    .back-link:hover {
       color: #000;
     }
 
@@ -118,7 +128,6 @@
 </head>
 
 <body>
-  <!-- 导航栏（与你的其他页面一致） -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Nicole Nian</a>
@@ -136,28 +145,27 @@
     </div>
   </nav>
 
-  <!-- Contact 内容 -->
   <div class="contact-wrapper">
     <div class="contact-content">
       <h1 class="contact-title">CONTACT</h1>
 
       <p class="contact-text">
-        Feel free to reach out for collaborations, inquiries, or just to say hello.
-      </p>
-
-      <p>
-        <a href="mailto:your.email@example.com" class="contact-link">
-          your.email@example.com
-        </a>
+        I’d love to hear from you—whether for collaborations, questions, or just to connect.
       </p>
 
       <div class="contact-social">
-        <a href="https://www.instagram.com/yourusername" target="_blank">Instagram</a>
-        <a href="https://twitter.com/yourusername" target="_blank">X / Twitter</a>
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/nicole_nian21?igsh=MTBubWdmbnZxdjk5dA%3D%3D&utm_source=qr" rel="noopener noreferrer">
+          <img src="images/instagram-icon.png" alt="Instagram"> <!-- 如果没有图标，可删掉 img 标签 -->
+          INSTAGRAM
+        </a>
+
+        <a href="https://buttondown.email/你的订阅链接" target="_blank" rel="noopener noreferrer">
+          <img src="images/email-icon.png" alt="Email"> <!-- 如果没有图标，可删掉 img 标签 -->
+          JOIN THE MAILING LIST
+        </a>
       </div>
 
-      <a href="index.html" class="back-link mt-5 d-block">← Back to Home</a>
+      <a href="index.html" class="back-link">← Back to Home</a>
     </div>
   </div>
 
