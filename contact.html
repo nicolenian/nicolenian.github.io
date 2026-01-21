@@ -72,15 +72,27 @@
       color: #000;
     }
 
-    .contact-text {
+    .contact-info {
       font-size: 0.95rem;
       line-height: 1.9;
       color: #666;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
+      text-align: left;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-divider {
+      width: 120px;
+      height: 1px;
+      background-color: #ccc;
+      border: none;
+      margin: 2rem auto;
     }
 
     .contact-social {
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
 
     .contact-social a {
@@ -120,7 +132,7 @@
     @media (max-width: 768px) {
       .contact-wrapper { padding: 10rem 6% 6rem; }
       .contact-title { font-size: 1.35rem; }
-      .contact-text { font-size: 0.9rem; }
+      .contact-info { font-size: 0.9rem; }
       .navbar-brand { font-size: 1.3rem; padding-left: 1.5rem; }
       .nav-link { font-size: 0.9rem; margin-left: 1.4rem; }
     }
@@ -149,20 +161,32 @@
     <div class="contact-content">
       <h1 class="contact-title">CONTACT</h1>
 
-      <p class="contact-text">
-        I’d love to hear from you—whether for collaborations, questions, or just to connect.
-      </p>
+      <div class="contact-info">
+        Nicole Nian<br>
+        Tama Art University<br>
+        Blow Up Studio<br>
+        193 Zhongshan Second Road<br>
+        Songjiang District, Shanghai<br><br>
+        Email: <a href="mailto:13621855521anian@gmail.com" class="contact-link">13621855521anian@gmail.com</a><br>
+  
+      </div>
+
+      <!-- 细横线 -->
+      <hr class="contact-divider">
 
       <div class="contact-social">
-        <a href="https://www.instagram.com/nicole_nian21?igsh=MTBubWdmbnZxdjk5dA%3D%3D&utm_source=qr" rel="noopener noreferrer">
-          <img src="images/instagram-icon.png" alt="Instagram"> <!-- 如果没有图标，可删掉 img 标签 -->
+        <a href="https://www.instagram.com/nicole_nian21?igsh=MTBubWdmbnZxdjk5dA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram-icon.png" alt="Instagram"> <!-- 如果没有图标，可删掉 img -->
           INSTAGRAM
         </a>
 
+        <!-- Mailing List（如果你还没链接，先注释或删掉） -->
+        <!--
         <a href="https://buttondown.email/你的订阅链接" target="_blank" rel="noopener noreferrer">
-          <img src="images/email-icon.png" alt="Email"> <!-- 如果没有图标，可删掉 img 标签 -->
+          <img src="images/email-icon.png" alt="Email">
           JOIN THE MAILING LIST
         </a>
+        -->
       </div>
 
       <a href="index.html" class="back-link">← Back to Home</a>
