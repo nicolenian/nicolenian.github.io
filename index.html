@@ -4,10 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nicole Nian - Abstract Oil Paintings</title>
-
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
   <!-- 自定义 CSS：Ian 风格字体 + 极简全屏首页 + 轮播背景白色过渡 -->
   <style>
     body {
@@ -20,7 +18,6 @@
       overflow: hidden; /* 固定不动，不能往下拉 */
       line-height: 1.6;
     }
-
     /* 导航栏：固定右上角，完全透明，透着图片 */
     .navbar {
       position: fixed;
@@ -31,7 +28,6 @@
       border-bottom: none;
       padding: 1.2rem 0;
     }
-
     .navbar-brand {
       font-size: 1.4rem;
       font-weight: 300;
@@ -39,7 +35,6 @@
       padding-left: 2rem;
       letter-spacing: 0.1em;
     }
-
     .navbar-nav .nav-link {
       color: #fff !important;
       font-weight: 300;
@@ -48,11 +43,9 @@
       letter-spacing: 0.05em;
       transition: color 0.3s;
     }
-
     .nav-link:hover {
       color: #ccc !important;
     }
-
     /* 首页全屏轮播（固定不动，自动横向切换 + 淡入淡出，背景白色） */
     .hero-carousel {
       height: 100vh;
@@ -60,30 +53,25 @@
       overflow: hidden;
       background: #fff; /* 轮播容器背景白色 */
     }
-
     .carousel-inner {
       height: 100%;
     }
-
     .carousel-inner .carousel-item {
       height: 100%;
-      transition: opacity 1.5s ease-in-out; /* 淡入淡出 + 轻微闪烁效果 */
+      transition: opacity 1.2s ease-in-out; /* 加快淡入淡出，从1.5s → 1.2s */
     }
-
     .carousel-inner .carousel-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
     }
-
     /* 去掉轮播控制箭头（可选，如果你不喜欢箭头） */
     .carousel-control-prev,
     .carousel-control-next {
       opacity: 0.4;
       filter: invert(1); /* 让箭头变白色，更显眼 */
     }
-
     /* 响应式 */
     @media (max-width: 768px) {
       .navbar-brand { font-size: 1.2rem; padding-left: 1rem; }
@@ -91,14 +79,12 @@
     }
   </style>
 </head>
-
 <body>
   <!-- 固定导航栏 -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <!-- 左上角名字 -->
       <a class="navbar-brand" href="#">Nicole Nian</a>
-
       <!-- 右边分类 -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -108,14 +94,12 @@
           <li class="nav-item"><a class="nav-link" href="artworks.html">ARTWORKS</a></li>
           <li class="nav-item"><a class="nav-link" href="statement.html">STATEMENT</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-          
         </ul>
       </div>
     </div>
   </nav>
-
   <!-- 首页：全屏轮播，自动播放5张，固定不动 + 淡入淡出白色过渡 -->
-  <div id="heroCarousel" class="hero-carousel carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  <div id="heroCarousel" class="hero-carousel carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="3500">
     <div class="carousel-inner">
       <!-- 第一张 -->
       <div class="carousel-item active">
@@ -139,7 +123,6 @@
       </div>
     </div>
   </div>
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
