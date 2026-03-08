@@ -99,6 +99,14 @@
     </div>
   </nav>
   <!-- 首页：全屏轮播，自动播放5张，固定不动 + 淡入淡出白色过渡 -->
+  <!-- 预加载轮播后面的图片 -->
+<div style="position:absolute; width:0; height:0; overflow:hidden; opacity:0; pointer-events:none;">
+  <img src="images/painting9.jpg" alt="">
+  <img src="images/painting1.jpg" alt="">
+  <img src="images/painting4.jpg" alt="">
+  <img src="images/painting5.jpg" alt="">
+  <img src="images/painting10.jpg" alt="">
+</div>
   <div id="heroCarousel" class="hero-carousel carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="3500">
     <div class="carousel-inner">
       <!-- 第一张 -->
