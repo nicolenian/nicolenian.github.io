@@ -53,18 +53,30 @@
     }
     .card:hover { transform: scale(1.03); }
 
-    /* 再次缩小图片 + 严格居中 */
+    /* 普通作品尺寸 */
     .card-img-top {
       width: 100% !important;
-      max-width: 460px !important;     /* 更小了 */
+      max-width: 460px !important;
       height: auto !important;
       object-fit: contain;
       margin: 0 auto 1.5rem auto;
       display: block;
     }
 
-    .special-large { max-width: 520px !important; }
-    .smaller { max-width: 380px !important; }
+    /* 特殊大图 */
+    .special-large { 
+      max-width: 520px !important; 
+    }
+
+    /* 已经比较小的作品 */
+    .smaller { 
+      max-width: 380px !important; 
+    }
+
+    /* 新增：特别小的作品（painting9,13,14,15） */
+    .much-smaller { 
+      max-width: 280px !important;   /* 明显缩小很多 */
+    }
 
     .card-body {
       padding: 0;
@@ -85,6 +97,8 @@
       .col { padding: 1.8rem 1rem; }
       .card-img-top { max-width: 380px !important; }
       .special-large { max-width: 440px !important; }
+      .smaller { max-width: 320px !important; }
+      .much-smaller { max-width: 240px !important; }
     }
   </style>
 </head>
@@ -109,7 +123,7 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
 
-        <!-- 以下是你的所有作品（已全部保留） -->
+        <!-- 第1-8幅（正常大小） -->
         <div class="col">
           <a href="painting1.html" class="text-decoration-none">
             <div class="card">
@@ -122,9 +136,179 @@
           </a>
         </div>
 
-        <!-- 第2到第15幅作品（为了节省篇幅，我这里只写第1幅作为示例，请把你之前的所有 <div class="col"> ... </div> 都粘贴进来，保持同样格式） -->
+        <div class="col">
+          <a href="painting2.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting2.jpg" class="card-img-top" alt="Late Summer Breeze">
+              <div class="card-body">
+                <div class="card-title">Late Summer Breeze</div>
+                <div class="card-text">Oil on canvas, 162×130cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
 
-        <!-- ... 请把你原来所有的作品卡片代码粘贴在这里 ... -->
+        <div class="col">
+          <a href="painting3.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting3.jpg" class="card-img-top" alt="What the Sea Wants to Say">
+              <div class="card-body">
+                <div class="card-title">What the Sea Wants to Say</div>
+                <div class="card-text">Oil on canvas, 170×150cm, 2026</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="painting4.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting4.jpg" class="card-img-top" alt="Innocence">
+              <div class="card-body">
+                <div class="card-title">Innocence</div>
+                <div class="card-text">Oil on canvas, 130×162cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="painting5.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting5.jpg" class="card-img-top" alt="Air">
+              <div class="card-body">
+                <div class="card-title">Air</div>
+                <div class="card-text">Oil on canvas, 168×168cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="painting6.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting6.jpg" class="card-img-top" alt="Deep Within the Heart">
+              <div class="card-body">
+                <div class="card-title">Deep Within the Heart</div>
+                <div class="card-text">Oil on canvas, 168×168cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="painting7.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting7.jpg" class="card-img-top" alt="Embracing Love">
+              <div class="card-body">
+                <div class="card-title">Embracing Love</div>
+                <div class="card-text">Oil on canvas, 180×130cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="painting8.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting8.jpg" class="card-img-top" alt="Tree shadows flickering in the heart, in the creek">
+              <div class="card-body">
+                <div class="card-title">Tree shadows flickering in the heart, in the creek</div>
+                <div class="card-text">Oil on canvas, 194×130cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第9幅 - 特别小 -->
+        <div class="col">
+          <a href="painting9.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting9.jpg" class="card-img-top much-smaller" alt="Ache">
+              <div class="card-body">
+                <div class="card-title">Ache</div>
+                <div class="card-text">Oil on canvas, 130×80cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第10-11幅 大图 -->
+        <div class="col">
+          <a href="painting10.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting10.jpg" class="card-img-top special-large" alt="Oneness">
+              <div class="card-body">
+                <div class="card-title">Oneness</div>
+                <div class="card-text">Oil on canvas, 194×130cm, 2024</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="painting11.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting11.jpg" class="card-img-top special-large" alt="The Forest and the Stream">
+              <div class="card-body">
+                <div class="card-title">The Forest and the Stream</div>
+                <div class="card-text">Oil on canvas, 194×130cm, 2024</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第12幅 - 较小 -->
+        <div class="col">
+          <a href="painting12.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting12.jpg" class="card-img-top smaller" alt="The ceaselessly arriving one">
+              <div class="card-body">
+                <div class="card-title">The ceaselessly arriving one</div>
+                <div class="card-text">Oil on canvas, 100×130cm, 2026</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第13幅 - 特别小 -->
+        <div class="col">
+          <a href="painting13.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting13.jpg" class="card-img-top much-smaller" alt="Strike">
+              <div class="card-body">
+                <div class="card-title">Strike</div>
+                <div class="card-text">Oil on canvas, 60×72cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第14幅 - 特别小 -->
+        <div class="col">
+          <a href="painting14.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting14.jpg" class="card-img-top much-smaller" alt="Breeze at the Eagle's Mountain Summit">
+              <div class="card-body">
+                <div class="card-title">Breeze at the Eagle's Mountain Summit</div>
+                <div class="card-text">Oil on canvas, 116×91cm, 2026</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第15幅 - 特别小 -->
+        <div class="col">
+          <a href="painting15.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting15.jpg" class="card-img-top much-smaller" alt="Untitled">
+              <div class="card-body">
+                <div class="card-title">Untitled</div>
+                <div class="card-text">Oil on canvas, 60×72cm, 2023</div>
+              </div>
+            </div>
+          </a>
+        </div>
 
       </div>
     </div>
