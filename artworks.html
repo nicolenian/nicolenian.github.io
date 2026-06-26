@@ -55,9 +55,8 @@
       width: 100%;
     }
 
-    /* 关键修复：减小间距 + 让网格正常工作 */
     .col {
-      padding: 2.5rem 1.8rem;   /* 减小左右间距 */
+      padding: 2.2rem 1.6rem;
       display: flex;
     }
 
@@ -76,24 +75,24 @@
       transform: scale(1.03);
     }
 
-    /* 图片自适应 - 这是让每排3个的关键 */
+    /* 关键调整：缩小30% + 严格居中对齐 */
     .card-img-top {
       width: 100% !important;
-      max-width: 100% !important;
+      max-width: 520px !important;     /* 主要尺寸（已缩小约30%） */
       height: auto !important;
       object-fit: contain;
       display: block;
-      margin: 0 auto 1.5rem auto;
+      margin: 0 auto 1.6rem auto;     /* 自动居中 */
     }
 
-    /* 特殊大图处理 */
+    /* 特殊大图稍微大一点，但仍控制大小 */
     .special-large {
-      max-width: 100% !important;
+      max-width: 580px !important;
     }
 
-    /* 小图处理 */
+    /* 小图更小 */
     .smaller {
-      max-width: 85% !important;
+      max-width: 420px !important;
     }
 
     .card-body {
@@ -116,9 +115,9 @@
     @media (max-width: 768px) {
       .album { padding: 9rem 4% 5rem; }
       .col { padding: 2rem 1.2rem; }
-      .card-img-top { margin-bottom: 1.2rem; }
-      .card-title,
-      .card-text { font-size: 0.8rem; }
+      .card-img-top { max-width: 420px !important; margin-bottom: 1.2rem; }
+      .special-large { max-width: 460px !important; }
+      .smaller { max-width: 340px !important; }
     }
   </style>
 </head>
@@ -142,7 +141,7 @@
   <main class="album">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
-        
+
         <!-- 第1幅 -->
         <div class="col">
           <a href="painting1.html" class="text-decoration-none">
@@ -182,10 +181,83 @@
           </a>
         </div>
 
-        <!-- 第4幅 ~ 第15幅（我已帮你修正标签和链接错误） -->
-        <!-- 后面部分我保持简洁，你可以继续复制粘贴你的其他作品 -->
+        <!-- 第4幅 -->
+        <div class="col">
+          <a href="painting4.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting4.jpg" class="card-img-top" alt="Innocence">
+              <div class="card-body">
+                <div class="card-title">Innocence</div>
+                <div class="card-text">Oil on canvas, 130×162cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
 
-        <!-- ... 其他作品保持同样格式 ... -->
+        <!-- 第5幅 -->
+        <div class="col">
+          <a href="painting5.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting5.jpg" class="card-img-top" alt="Air">
+              <div class="card-body">
+                <div class="card-title">Air</div>
+                <div class="card-text">Oil on canvas, 168×168cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第6幅 -->
+        <div class="col">
+          <a href="painting6.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting6.jpg" class="card-img-top" alt="Deep Within the Heart">
+              <div class="card-body">
+                <div class="card-title">Deep Within the Heart</div>
+                <div class="card-text">Oil on canvas, 168×168cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第7幅 -->
+        <div class="col">
+          <a href="painting7.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting7.jpg" class="card-img-top" alt="Embracing Love">
+              <div class="card-body">
+                <div class="card-title">Embracing Love</div>
+                <div class="card-text">Oil on canvas, 180×130cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第8幅 -->
+        <div class="col">
+          <a href="painting8.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting8.jpg" class="card-img-top" alt="Tree shadows flickering in the heart, in the creek">
+              <div class="card-body">
+                <div class="card-title">Tree shadows flickering in the heart, in the creek</div>
+                <div class="card-text">Oil on canvas, 194×130cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 第9幅 -->
+        <div class="col">
+          <a href="painting9.html" class="text-decoration-none">
+            <div class="card">
+              <img src="images/painting9.jpg" class="card-img-top" alt="Ache">
+              <div class="card-body">
+                <div class="card-title">Ache</div>
+                <div class="card-text">Oil on canvas, 130×80cm, 2025</div>
+              </div>
+            </div>
+          </a>
+        </div>
 
         <!-- 第10幅：特殊大图 -->
         <div class="col">
