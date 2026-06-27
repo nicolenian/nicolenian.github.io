@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://nicolenian.com/</loc>
@@ -26,55 +26,56 @@
     <loc>https://nicolenian.com/painting2.html</loc>
   </url>
 
- <url>
+  <url>
     <loc>https://nicolenian.com/painting3.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting4.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting5.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting6.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting7.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting8.html</loc>
   </url>
 
-   <url>
-    <loc>https://nicolenian.com/painting8.html</loc>
+  <url>
+    <loc>https://nicolenian.com/painting9.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting10.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting11.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting12.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting13.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting14.html</loc>
   </url>
 
-   <url>
+  <url>
     <loc>https://nicolenian.com/painting15.html</loc>
   </url>
+
 </urlset>
